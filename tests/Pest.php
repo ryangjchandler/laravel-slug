@@ -1,5 +1,5 @@
 <?php
 
-use RyanChandler\LaravelSlug\Tests\TestCase;
+use RyanChandler\Slug\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

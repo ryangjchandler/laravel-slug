@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "RyanChandler\\LaravelSlug\\": "src",
-            "RyanChandler\\LaravelSlug\\Database\\Factories\\": "database/factories"
+            "RyanChandler\\Slug\\": "src",
+            "RyanChandler\\Slug\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "RyanChandler\\LaravelSlug\\Tests\\": "tests"
+            "RyanChandler\\Slug\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RyanChandler\\LaravelSlug\\LaravelSlugServiceProvider"
+                "RyanChandler\\Slug\\LaravelSlugServiceProvider"
             ],
             "aliases": {
-                "LaravelSlug": "RyanChandler\\LaravelSlug\\Facades\\LaravelSlug"
+                "LaravelSlug": "RyanChandler\\Slug\\Facades\\LaravelSlug"
             }
         }
     },

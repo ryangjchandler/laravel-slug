@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\LaravelSlug\Commands;
+namespace RyanChandler\Slug\Commands;
 
 use Illuminate\Console\Command;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace RyanChandler\LaravelSlug;
+namespace RyanChandler\Slug;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use RyanChandler\LaravelSlug\Commands\LaravelSlugCommand;
+use RyanChandler\Slug\Commands\LaravelSlugCommand;
 
 class LaravelSlugServiceProvider extends PackageServiceProvider
 {

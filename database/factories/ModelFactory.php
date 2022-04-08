@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\LaravelSlug\Database\Factories;
+namespace RyanChandler\Slug\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

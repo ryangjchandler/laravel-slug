@@ -55,7 +55,7 @@ php artisan vendor:publish --tag="laravel-slug-views"
 ## Usage
 
 ```php
-$laravelSlug = new RyanChandler\LaravelSlug();
+$laravelSlug = new RyanChandler\Slug();
 echo $laravelSlug->echoPhrase('Hello, RyanChandler!');
 ```
 

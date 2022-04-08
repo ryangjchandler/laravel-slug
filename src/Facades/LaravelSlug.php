@@ -1,11 +1,11 @@
 <?php
 
-namespace RyanChandler\LaravelSlug\Facades;
+namespace RyanChandler\Slug\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \RyanChandler\LaravelSlug\LaravelSlug
+ * @see \RyanChandler\Slug\LaravelSlug
  */
 class LaravelSlug extends Facade
 {

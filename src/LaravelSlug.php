@@ -1,6 +1,6 @@
 <?php
 
-namespace RyanChandler\LaravelSlug;
+namespace RyanChandler\Slug;
 
 class LaravelSlug
 {

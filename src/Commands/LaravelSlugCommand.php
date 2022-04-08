@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace RyanChandler\LaravelSlug\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelSlugCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-slug';
 
     public $description = 'My command';
 

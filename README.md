@@ -1,6 +1,3 @@
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
-
 # Simple slugs for your Laravel models.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ryangjchandler/laravel-slug.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/laravel-slug)
@@ -8,56 +5,45 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ryangjchandler/laravel-slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ryangjchandler/laravel-slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ryangjchandler/laravel-slug.svg?style=flat-square)](https://packagist.org/packages/ryangjchandler/laravel-slug)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-slug.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-slug)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This packages provides an opinionated, attribute-driven trait for automatically generating slugs when creating Laravel models.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require ryangjchandler/laravel-slug
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-slug-config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-slug-views"
-```
-
 ## Usage
 
+Use the `RyanChandler\Slug\Concerns\HasSlug` trait on your model class.
+
 ```php
-$laravelSlug = new RyanChandler\Slug();
-echo $laravelSlug->echoPhrase('Hello, RyanChandler!');
+use RyanChandler\Slug\Concerns\HasSlug;
+
+class Post extends Model
+{
+    use HasSlug;
+}
 ```
+
+By default, this package will generate a slug using a `title` column on your model and store the value in a `slug` column.
+
+This can be changed using the `RyanChandler\Slug\Attribute\Slug` attribute.
+
+```php
+use RyanChandler\Slug\Concerns\HasSlug;
+use RyanChandler\Slug\Attribute\Slug;
+
+#[Slug(source: 'name', column: 'my_slug')]
+class Post extends Model
+{
+    use HasSlug;
+}
+```
+
+The `source` argument should contain the name of the column you'd like to generate a slug from. The `column` argument should contain the name of the column you'd like to store the generated slug in.
 
 ## Testing
 

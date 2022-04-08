@@ -1,10 +1,10 @@
 <?php
 
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use RyanChandler\Slug\Attributes\Slug;
-use Illuminate\Database\Eloquent\Model;
 use RyanChandler\Slug\Concerns\HasSlug;
-use Illuminate\Database\Schema\Blueprint;
 
 class Post extends Model
 {

@@ -2,9 +2,9 @@
 
 namespace RyanChandler\Slug\Concerns;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use RyanChandler\Slug\Support;
-use Illuminate\Database\Eloquent\Model;
 
 trait HasSlug
 {

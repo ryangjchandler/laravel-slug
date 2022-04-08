@@ -10,5 +10,6 @@ class Slug
     public function __construct(
         public string $source = 'title',
         public string $column = 'slug',
-    ) {}
+    ) {
+    }
 }

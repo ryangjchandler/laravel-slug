@@ -65,3 +65,29 @@ it('can generate a slug and store in custom column', function () {
         ->path->toBe('ryan-chandler')
         ->slug->toBeNull();
 });
+
+it('can force uniqueness of a slug', function () {
+    ForceUniqueness::create([
+        'title' => 'Foo',
+    ]);
+
+    $forced = ForceUniqueness::create([
+        'title' => 'Foo',
+    ]);
+
+    expect($forced)
+        ->slug->toBe('foo-1');
+
+    $forced2 = ForceUniqueness::create([
+        'title' => 'Foo',
+    ]);
+
+    expect($forced2)
+        ->slug->toBe('foo-2');
+});
+
+#[Slug(forceUniqueness: true)]
+class ForceUniqueness extends Post
+{
+    protected $table = 'posts';
+}

@@ -72,14 +72,14 @@ it('can force uniqueness of a slug', function () {
     ]);
 
     $forced = ForceUniqueness::create([
-        'title' => 'Foo'
+        'title' => 'Foo',
     ]);
 
     expect($forced)
         ->slug->toBe('foo-1');
 
     $forced2 = ForceUniqueness::create([
-        'title' => 'Foo'
+        'title' => 'Foo',
     ]);
 
     expect($forced2)

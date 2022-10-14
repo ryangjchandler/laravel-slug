@@ -33,6 +33,10 @@ trait HasSlug
             })
             ->count();
 
+        if ($count === 0) {
+            return $slug;
+        }
+
         return $slug . '-' . $count;
     }
 }
